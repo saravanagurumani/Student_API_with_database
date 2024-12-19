@@ -1,10 +1,21 @@
 package com.sgm.sgmwebpro.Model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import org.springframework.stereotype.Component;
+
+
+@Component
+@Entity
 public class Student {
 
+    @Id
     private int stuId;
     private String stuName;
     private String stuDept;
+
+    public Student() {
+    }
 
     public Student(int stuId, String stuName, String stuDept) {
         this.stuId = stuId;
